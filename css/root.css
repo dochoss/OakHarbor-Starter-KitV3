@@ -4,14 +4,13 @@
 /* Mobile */
 @media only screen and (min-width: 0em) {
   :root {
-    --primary: #d64550;
-    --primaryShade: #ea9e8d;
-    --primaryDark: #daefb3;
-    --dark: #1c2826;
-    --medium: #2a3c39;
-    --accent: #3b5450;
+    --primary: #7792e4;
+    --primaryDark: #364381;
+    --dark: #21201c;
+    --medium: #37352f;
+    --accent: #4d4a42;
     --bodyText: #000;
-    --buttonText: #fff;
+    --buttonText: #000;
     --buttonHoverText: #fff;
     --fontFamily: 'Alexandria';
   }
