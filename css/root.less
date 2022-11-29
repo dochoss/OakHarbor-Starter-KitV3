@@ -7,52 +7,130 @@
 
     // Website colors
     :root {
-        --primary: #FFBA19;
-        --primaryShade: #ffd675;
-        --primaryDark: #805d0d;
-        --bodyText: #1a1a1a;
+        --primary: #d64550;
+        --primaryShade: #ea9e8d;
+        
+        // Dark Mode Color Scheme
+        --primaryDark: #daefb3;
+        --dark: #1c2826;
+        --medium: #2a3c39;
+        --accent: #3b5450;
+        
+        // Text colors
+        --bodyText: #000;
+        --buttonText: #fff;
+        --buttonHoverText: #fff;
+
+        // Font Family Name
+        --fontFamily: 'Alexandria'
     }
 
     // Grab your fonts to locally host from https://google-webfonts-helper.herokuapp.com/fonts
-    
-    /* roboto-regular - latin */
+
+    /* alexandria-regular - latin */
     @font-face {
-        font-family: 'Roboto';
+        font-family: 'Alexandria';
         font-style: normal;
         font-weight: 400;
+        font-display: swap;
+        src: url('../fonts/alexandria-v1-latin-regular.eot');
+        /* IE9 Compat Modes */
         src: local(''),
-            url('../fonts/roboto-v29-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-            url('../fonts/roboto-v29-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+            /* IE6-IE8 */
+            url('../fonts/alexandria-v1-latin-regular.eot?#iefix') format('embedded-opentype'),
+            /* Super Modern Browsers */
+            url('../fonts/alexandria-v1-latin-regular.woff2') format('woff2'),
+            /* Modern Browsers */
+            url('../fonts/alexandria-v1-latin-regular.woff') format('woff'),
+            /* Safari, Android, iOS */
+            url('../fonts/alexandria-v1-latin-regular.ttf') format('truetype'),
+            /* Legacy iOS */
+            url('../fonts/alexandria-v1-latin-regular.svg#Alexandria') format('svg');
     }
-    /* roboto-700 - latin */
+
+    /* alexandria-700 - latin */
     @font-face {
-        font-family: 'Roboto';
+        font-family: 'Alexandria';
         font-style: normal;
         font-weight: 700;
+        font-display: swap;
+        src: url('../fonts/alexandria-v1-latin-700.eot');
+        /* IE9 Compat Modes */
         src: local(''),
-            url('../fonts/roboto-v29-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-            url('../fonts/roboto-v29-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+            /* IE6-IE8 */
+            url('../fonts/alexandria-v1-latin-700.eot?#iefix') format('embedded-opentype'),
+            /* Super Modern Browsers */
+            url('../fonts/alexandria-v1-latin-700.woff2') format('woff2'),
+            /* Modern Browsers */
+            url('../fonts/alexandria-v1-latin-700.woff') format('woff'),
+            /* Safari, Android, iOS */
+            url('../fonts/alexandria-v1-latin-700.ttf') format('truetype'),
+            /* Legacy iOS */
+            url('../fonts/alexandria-v1-latin-700.svg#Alexandria') format('svg');
     }
-    /* roboto-900 - latin */
+
+    /* alexandria-900 - latin */
     @font-face {
-        font-family: 'Roboto';
+        font-family: 'Alexandria';
         font-style: normal;
         font-weight: 900;
+        font-display: swap;
+        src: url('../fonts/alexandria-v1-latin-900.eot');
+        /* IE9 Compat Modes */
         src: local(''),
-            url('../fonts/roboto-v29-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-            url('../fonts/roboto-v29-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+            /* IE6-IE8 */
+            url('../fonts/alexandria-v1-latin-900.eot?#iefix') format('embedded-opentype'),
+            /* Super Modern Browsers */
+            url('../fonts/alexandria-v1-latin-900.woff2') format('woff2'),
+            /* Modern Browsers */
+            url('../fonts/alexandria-v1-latin-900.woff') format('woff'),
+            /* Safari, Android, iOS */
+            url('../fonts/alexandria-v1-latin-900.ttf') format('truetype'),
+            /* Legacy iOS */
+            url('../fonts/alexandria-v1-latin-900.svg#Alexandria') format('svg');
     }
-    
-    body, html {
+
+    /* roboto-regular - latin */
+    // @font-face {
+    //     font-family: 'Roboto';
+    //     font-style: normal;
+    //     font-weight: 400;
+    //     src: local(''),
+    //         url('../fonts/roboto-v29-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    //         url('../fonts/roboto-v29-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    // }
+    /* roboto-700 - latin */
+    // @font-face {
+    //     font-family: 'Roboto';
+    //     font-style: normal;
+    //     font-weight: 700;
+    //     src: local(''),
+    //         url('../fonts/roboto-v29-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    //         url('../fonts/roboto-v29-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    // }
+    /* roboto-900 - latin */
+    // @font-face {
+    //     font-family: 'Roboto';
+    //     font-style: normal;
+    //     font-weight: 900;
+    //     src: local(''),
+    //         url('../fonts/roboto-v29-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    //         url('../fonts/roboto-v29-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    // }
+
+    body,
+    html {
         margin: 0;
         padding: 0;
         font-size: 100%;
-        font-family: 'Roboto', Arial, sans-serif;
+        font-family: var(--fontFamily), Arial, sans-serif;
         color: var(--bodyText);
         overflow-x: hidden;
     }
 
-    *, *:before, *:after {
+    *,
+    *:before,
+    *:after {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -61,34 +139,43 @@
     body {
         transition: background-color .3s;
     }
-    
+
     .container {
         position: relative;
         width: 92%;
         margin: auto;
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         margin: 0;
         color: #1a1a1a;
     }
-    
-    p, li, a {
+
+    p,
+    li,
+    a {
         font-size: 18/16em;
         line-height: 27/18em;
         margin: 0;
     }
 
-    p, li {
+    p,
+    li {
         color: #575757;
     }
 
-    a, button {
+    a,
+    button {
         &:hover {
             cursor: pointer;
         }
     }
-    
+
     // Buttons
     .button-solid {
         font-size: 14/16em;
@@ -106,12 +193,13 @@
         background-color: var(--primary);
 
         // Transition Properties
-        color: #000;
+        color: var(--buttonText);
         transition: color .3s;
         transition-delay: .1s;
 
         &:hover {
-            color: #fff;
+            color: var(--buttonHoverText);
+
             &:before {
                 width: 100%;
             }
@@ -133,7 +221,7 @@
             transition: width .3s;
         }
     }
-    
+
     // HIdden Screen reader skip nav button
     .skip {
         position: absolute;
@@ -146,7 +234,9 @@
 
 /* Reset Margins */
 @media only screen and (min-width: 1024px) {
-    body, html {
+
+    body,
+    html {
         padding: 0;
         margin: 0;
     }
@@ -154,7 +244,9 @@
 
 /* Scale full website with the viewport width */
 @media only screen and (min-width: 2000px) {
-    body, html {
+
+    body,
+    html {
         font-size: .85vw;
     }
 }
@@ -193,7 +285,7 @@
         // Logo
         .logo {
             display: inline-block;
-            height: 30/16em ;
+            height: 30/16em;
             width: auto;
 
             img {
@@ -273,6 +365,7 @@
         .hamburger-menu.clicked {
             span {
                 background-color: transparent;
+
                 &:before {
                     width: 100%;
                     transform: translate(-50%, -50%) rotate(225deg);
@@ -311,6 +404,7 @@
             ul {
                 padding: 0;
                 perspective: 700px;
+
                 li {
                     list-style: none;
                     margin-bottom: 24/16em;
@@ -325,18 +419,23 @@
                     &:nth-of-type(1) {
                         transition-delay: .1s;
                     }
+
                     &:nth-of-type(2) {
                         transition-delay: .2s;
                     }
+
                     &:nth-of-type(3) {
                         transition-delay: .3s;
                     }
+
                     &:nth-of-type(4) {
                         transition-delay: .4s;
                     }
+
                     &:nth-of-type(5) {
                         transition-delay: .5s;
                     }
+
                     a {
                         text-decoration: none;
                         text-transform: uppercase;
@@ -389,7 +488,7 @@
 
     // Custom Scroll bar
     ::-webkit-scrollbar-track {
-        -webkit-box-shadow: inset 0 0 6/16em rgba(0,0,0,0.3);
+        -webkit-box-shadow: inset 0 0 6/16em rgba(0, 0, 0, 0.3);
         background-color: #fff;
     }
 
@@ -535,12 +634,12 @@
                             bottom: 2/19em;
                             z-index: -1;
                             left: 0;
-        
+
                             // transition properties
                             width: 0%;
                             transition: width .3s;
                         }
-        
+
                         &:hover {
                             &:before {
                                 width: 100%;
@@ -595,10 +694,12 @@
                         background-color: var(--dark);
                     }
                 }
+
                 span {
                     background-color: #fff;
 
-                    &:before, &:after {
+                    &:before,
+                    &:after {
                         background-color: #fff;
                     }
                 }
@@ -621,6 +722,7 @@
                     li {
                         a {
                             color: #fff;
+
                             &:before {
                                 background: var(--accent);
                             }
@@ -659,6 +761,7 @@
                     li {
                         a {
                             color: #fff;
+
                             &:before {
                                 background: var(--accent);
                             }
@@ -671,7 +774,7 @@
                 }
             }
         }
-        
+
     }
 }
 
@@ -703,9 +806,9 @@
             top: 0;
             left: 0;
             z-index: -1;
-          }
+        }
 
-          picture {
+        picture {
             position: absolute;
             top: 0;
             left: 0;
@@ -745,7 +848,7 @@
             width: 96%;
         }
     }
-    
+
 }
 
 /* Tablet */
@@ -781,18 +884,19 @@
 @media only screen and (min-width: 0em) {
 
     #footer {
-        background: #1C1C1C;
+        background: var(--dark);
         padding: 84/16em 0 20/16em;
-        font-size:~"min(4vw, 1.2em)";
+        font-size: ~"min(4vw, 1.2em)";
 
         .left-section {
             margin: auto;
             margin-bottom: 50/16em;
             text-align: center;
+
             .logo {
                 display: inline-block;
                 margin: auto;
-				width: auto;
+                width: auto;
                 height: 50/16em;
                 margin-bottom: 30/16em;
                 text-align: center;
@@ -803,12 +907,12 @@
                     display: block;
                 }
             }
-    
+
             p {
                 font-size: 14/16em;
                 line-height: 27/14;
                 color: #fff;
-				opacity: .9;
+                opacity: .9;
                 text-align: center;
                 width: 100%;
                 width: 307/14em;
@@ -820,6 +924,7 @@
             width: 96%;
             max-width: 407/16em;
             margin: auto;
+
             .lists {
                 display: flex;
                 justify-content: space-between;
@@ -827,6 +932,7 @@
                 width: 96%;
                 max-width: 307/16em;
                 margin: auto;
+
                 ul {
                     padding: 0;
                     margin-bottom: 0;
@@ -834,6 +940,7 @@
 
                     &:nth-of-type(3) {
                         margin-top: 50/16em;
+
                         li {
                             display: flex;
                             justify-content: flex-start;
@@ -849,40 +956,42 @@
                     li {
                         list-style: none;
                         margin-bottom: 12/18em;
-						color: #fff;
-						font-size: 18/18em;
-						opacity: .9;
-                        
+                        color: #fff;
+                        font-size: 18/18em;
+                        opacity: .9;
+
                         a {
                             text-decoration: none;
                             color: #fff;
                             line-height: 21/18;
-							transition: color .3s;
-							&:hover {
-								color: var(--primary);
-							}
+                            transition: color .3s;
+
+                            &:hover {
+                                color: var(--primary);
+                            }
                         }
                     }
+
                     h2 {
                         color: #fff;
                         font-size: 18/16em;
                         line-height: 21/18;
                         margin-bottom: 37/18em;
-						text-transform: uppercase;
-						font-weight: bold;
-						position: relative;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        position: relative;
 
-						&:before {
-							content: '';
-							position: absolute;
-							display: block;
-							height: 2/18em;
-							width: 97/18em;
-							background: #EEBE76;
-							opacity: 1;
-							bottom: -16/18em;
-							left: 0;
-						}
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            display: block;
+                            height: 2/18em;
+                            width: 97/18em;
+                            background: #EEBE76;
+                            opacity: 1;
+                            bottom: -16/18em;
+                            left: 0;
+                        }
                     }
                 }
             }
@@ -891,7 +1000,7 @@
                 display: flex;
                 justify-content: center;
             }
-    
+
             .button-solid {
                 margin: 0;
                 height: 53/18em;
@@ -900,30 +1009,30 @@
             }
         }
 
-		.credit {
-			color: #fff;
-			width: 96%;
-			margin: auto;
-			text-align: center;
-			margin-top: 100/16em;
-			line-height: 36/16em;
-			font-size: 16/16em;
+        .credit {
+            color: #fff;
+            width: 96%;
+            margin: auto;
+            text-align: center;
+            margin-top: 100/16em;
+            line-height: 36/16em;
+            font-size: 16/16em;
 
-			a {
-				color: var(--primary);
-				text-decoration: none;
-				font-size: 16/16em;
+            a {
+                color: var(--primary);
+                text-decoration: none;
+                font-size: 16/16em;
 
-				&:hover {
-					text-decoration: underline;
-				}
-			}
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
 
-			.copyright {
-				display: block;
-				font-size: 16/16em;
-			}
-		}
+            .copyright {
+                display: block;
+                font-size: 16/16em;
+            }
+        }
     }
 
 }
@@ -932,7 +1041,8 @@
 @media only screen and (min-width: 64em) {
 
     #footer {
-        font-size:~"min(1.2vw, 1em)";
+        font-size: ~"min(1.2vw, 1em)";
+
         .container {
             display: flex;
             flex-direction: row;
@@ -951,7 +1061,7 @@
 
             .logo {
                 text-align: left;
-				margin-left: 0;
+                margin-left: 0;
                 height: 70/16em;
             }
 
@@ -965,6 +1075,7 @@
             margin: 0;
             width: 609/16em;
             max-width: none;
+
             .lists {
                 width: 96%;
                 max-width: 769/16em;
@@ -1012,11 +1123,11 @@
             }
         }
 
-		.credit {
-			.copyright {
-				display: inline-block;
-			}
-		}
+        .credit {
+            .copyright {
+                display: inline-block;
+            }
+        }
     }
 }
 
@@ -1024,7 +1135,7 @@
 @media only screen and (min-width: 0em) {
     body.dark-mode {
         #footer {
-            background: #061623;
+            background: var(--dark);
         }
     }
 }
